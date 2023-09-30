@@ -16,6 +16,9 @@ class TravelController extends Controller
                 'data' => $travels,
                 'meta' => [
                     'last_page' => $travels->lastPage(),
+                    'current_page' => $travels->currentPage(),
+                    'next_page_url' => $travels->nextPageUrl(),
+
                 ],
             ],
             200
