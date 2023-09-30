@@ -9,8 +9,9 @@ use App\Models\Travel;
 
 class TravelController extends Controller
 {
-    public function index(){
-        $travels = TravelResource::collection( Travel::where('is_public', true)->paginate());
+    public function index()
+    {
+        $travels = TravelResource::collection(Travel::where('is_public', true)->paginate());
         return response()->json(
             [
                 'data' => $travels,
