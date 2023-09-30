@@ -18,8 +18,8 @@ class TourFactory extends Factory
     {
         return [
             'name' => fake()->sentence(3),
-            'starting_date' => fake()->now(),
-            'ending_date' => fake()->now()->addDays(rand(1, 20)),
+            'starting_date' => $this->faker->dateTimeBetween('now', '+1 years'),
+            'ending_date' => $this->faker->dateTimeBetween('+1 years', '+2 years'),
             'price' => fake()->randomFloat(2, 100, 1000),
         ];
     }

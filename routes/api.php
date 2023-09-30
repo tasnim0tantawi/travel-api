@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/travels', TravelController::class)->only(['index', 'show']);
-Route::get('/travels/{travel:slug}/tour', [TourController::class, 'index']);
+Route::get('/travels/{travel:slug}/tours', [TourController::class, 'index']);
